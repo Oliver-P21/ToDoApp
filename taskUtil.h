@@ -2,10 +2,10 @@
 #include <stdlib.h>
 #include <string.h>
 
-typedef struct structTask {
+typedef struct Task {
     int taskNumber;
     char task[64];
-    struct structTask* nextTask;
+    struct Task* nextTask;
 } Task;
 
 void respondToInput(char, Task*);
