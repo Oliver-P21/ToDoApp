@@ -3,7 +3,7 @@
 void showMenu() {
     printf("What would you like to do?\n");
     printf("1. Add a task\n");
-    printf("2. Complete ( or Remove) a task\n");
+    printf("2. Complete (or Remove) a task\n");
     printf("3. Modify a task\n");
     printf("4. List all tasks\n");
     printf("5. End session\n\n");
