@@ -9,10 +9,11 @@ void showMenu() {
     printf("5. End session\n\n");
 }
 
-void respondToInput(char option) {
+void respondToInput(char option, Task* head) {
     switch (option) {
         case '1':
             printf("You chose to add a task\n\n");
+            createAndAddTask(head);
             break;
         case '2':
             printf("You chose to complete a task\n\n");
@@ -31,7 +32,7 @@ void respondToInput(char option) {
 
 void createAndAddTask(Task* head) {
     Task* newTask = malloc(sizeof(Task));
-    char buffer[64];
+    char buffer[64];  // may not need to decalre whole new buffer
     printf("Enter the new task: ");
     fgets(buffer, 64, stdin);
     strcpy(newTask->task, buffer);
@@ -43,6 +44,7 @@ void createAndAddTask(Task* head) {
 
     ptr->nextTask = newTask;
     newTask->taskNumber = ptr->taskNumber + 1;
+    newTask->nextTask = NULL;
 }
 
 void printTaskList(Task* head) {

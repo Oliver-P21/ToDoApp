@@ -8,7 +8,7 @@ typedef struct structTask {
     struct structTask* nextTask;
 } Task;
 
-void respondToInput(char);
+void respondToInput(char, Task*);
 void showMenu();
 void printTaskList(Task*);
 void createAndAddTask(Task*);
